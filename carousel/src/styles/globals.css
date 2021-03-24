@@ -1,0 +1,12 @@
+/* Global Styling here */
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  opacity: 1 !important;
+  background: rgba(109, 109, 109, 0.8) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #d3004a !important;
+  transition: 0.5s !important;
+}
