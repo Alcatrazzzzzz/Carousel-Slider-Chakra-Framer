@@ -9,12 +9,6 @@ interface AliceCarouselProps {}
 
 const MotionFlex = motion(Flex);
 
-const responsive = {
-  0: { items: 1 },
-  568: { items: 2 },
-  1024: { items: 3 },
-};
-
 const data = ["1", "2", "3", "4", "5", "6", "7"];
 
 const AliceCarousel: React.FC<AliceCarouselProps> = ({}) => {
@@ -50,6 +44,7 @@ const AliceCarousel: React.FC<AliceCarouselProps> = ({}) => {
           <AnimatePresence>
             {activeIndex === index ? (
               <MotionFlex
+                pointerEvents="none"
                 key={"1"}
                 borderRadius="0px 0px 10px 10px"
                 position="absolute"
@@ -71,7 +66,6 @@ const AliceCarousel: React.FC<AliceCarouselProps> = ({}) => {
                   flexDir="column"
                   p="20px"
                   mt="auto"
-                  pointerEvents="none"
                   initial={{ y: "20%" }}
                   animate={{ y: "0%", transition: { duration: 0.7 } }}
                   exit={{ y: "20%", transition: { duration: 0.5 } }}
@@ -146,7 +140,6 @@ const AliceCarousel: React.FC<AliceCarouselProps> = ({}) => {
         mouseTracking
         touchTracking
         items={items}
-        responsive={responsive}
         renderDotsItem={renderDotsItem}
         activeIndex={activeIndex}
         onSlideChanged={onSlideChange}
