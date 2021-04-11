@@ -22,7 +22,7 @@ const AliceCarousel: React.FC<AliceCarouselProps> = ({}) => {
     }
   });
 
-  const items = data.map((img, index) => {
+  const items = data.map((_, index) => {
     const ref = useRef();
     return (
       <Flex w="340px" h="400px" p="0 20px">
@@ -125,7 +125,7 @@ const AliceCarousel: React.FC<AliceCarouselProps> = ({}) => {
     );
   };
 
-  const onSlideChange = (e: any) => {
+  const onSlideChange = () => {
     setActiveSlide((refCar.current as any).state.activeIndex);
   };
 
