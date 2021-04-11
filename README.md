@@ -1,4 +1,6 @@
 # Carousel-Slider-Chakra-Framer
-Chakra UI + Framer Motion Carousel Slider
+Making carousel slider using packages and animations
+
+Stack: AliceCarousel + ChakraUI + FramerMotion + NextJS
 
 Demo: https://carousel-slider-chakra-framer.vercel.app/
